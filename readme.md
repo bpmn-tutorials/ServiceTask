@@ -72,3 +72,17 @@ After execution following text will be printed in Server Log (*On Entry Action* 
 12:43:26,950 INFO  [stdout] (default task-18) Hello, John
 12:43:26,950 INFO  [stdout] (default task-18) Thread ID is: 2600
 ```
+
+## ServiceTaskInsideOfAdHocSubProcess
+![](src/main/resources/com/myspace/servicetask/ServiceTask.ServiceTaskInsideOfAdHocSubProcess-svg.svg)
+
+### Used Parameters of _Java Service Task_
+* **Implementation** - *Java* (Java class will be executed)
+* **Interface** - *org.test.service.SimpleServiceTask* (FQN of the executed class)
+* **Operation** - *sayHelloTo* (method name to invoke)
+* **AdHoc Autostart** - *true* (Task will be executed automatically when parent AdHoc Sub-process will be triggered)
+* **Input Data Assignment** - *Parameter* this is Input Data Assignment for Java Service task, it will be transferred to java class. Mapped to process variable.
+* **Output Data Assignment** - *Result* this is Output Data Assignment for Java Service Task, when class executed this variable will store the result and transfer to Process variable.
+
+When you start process your name will be asked. When process will be finished you will see that Process variable *ResultFromTheServiceTask* will store `Hello, %name%` answer.
+![](./images/AdHocExecuted.png)
