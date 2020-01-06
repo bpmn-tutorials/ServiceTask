@@ -123,5 +123,8 @@ Second Java Service Task (_SLA 5 seconds Call java method with Float parameter_)
 * **Operation** - *waitInterval* (method name to invoke)
 * **Input Data Assignment** - has two variables:
   * *Parameter* this is Input Data Assignment for Java Service task, it will be transferred to java class. Mapped to process variable.
-  * *ParameterType* this is Input Data Assignment for Java Service task, it will be transferred to java class and represent type of the *Parameter*. Mapped to constant *java.lang.Integer*.
+  * *ParameterType* this is Input Data Assignment for Java Service task, it will be transferred to java class and represent type of the *Parameter*. Mapped to constant *java.lang.Float*.
 * **SLA Due Date** - *5s* if you will send to the task parameter with Parameter value more than 0.083 minutes, SLA Due Date will be violated.
+
+When process is executing you can see SLA status of the tasks in the Process Instance Diagram, just click on the task and check the information about it.
+![](./images/SLAViolation.png)
